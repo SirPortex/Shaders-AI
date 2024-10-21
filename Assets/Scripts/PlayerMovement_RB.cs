@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement_RB : MonoBehaviour
 {
-    public float speed, runningSpeed, rotationSpeed, jumpForce, sphereRadius;//,gravityScale;
+    public float walkingSpeed, runningSpeed, aceleration, rotationSpeed, jumpForce, sphereRadius;//,gravityScale;
+
 
     public string groundName;
 
@@ -15,6 +16,8 @@ public class PlayerMovement_RB : MonoBehaviour
     private Rigidbody rb;
     private float x, z, mouseX; //input
     private bool jumpPressed;
+    private bool shiftPressed;
+    private float currentSpeed;
 
 
     // Start is called before the first frame update
@@ -22,6 +25,7 @@ public class PlayerMovement_RB : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+
         //gravityScale = -Mathf.Abs(gravityScale); //Valor Absoluto
 
     }
@@ -32,6 +36,10 @@ public class PlayerMovement_RB : MonoBehaviour
         x = Input.GetAxisRaw("Horizontal");
         z = Input.GetAxisRaw("Vertical");
         mouseX = Input.GetAxisRaw("Mouse X");
+        shiftPressed = Input.GetKey(KeyCode.LeftShift);
+
+        InterpolationSpeed();
+
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
@@ -42,9 +50,20 @@ public class PlayerMovement_RB : MonoBehaviour
         RotatePlayer();
     }
 
-    public Vector3 GetMovementVector()
+    public void InterpolationSpeed()
     {
-        return movementVector;
+        if (shiftPressed)
+        {
+            currentSpeed = Mathf.Lerp(currentSpeed, runningSpeed, aceleration * Time.deltaTime);
+        }
+        else if (x != 0 || z != 0)
+        {
+            currentSpeed = Mathf.Lerp(currentSpeed, walkingSpeed, aceleration * Time.deltaTime);
+        }
+        else
+        {
+            currentSpeed = Mathf.Lerp(currentSpeed, 0, aceleration * Time.deltaTime);
+        }
     }
 
     void RotatePlayer()
@@ -62,7 +81,7 @@ public class PlayerMovement_RB : MonoBehaviour
 
     void ApplySpeed()
     {
-        rb.velocity = (transform.forward * speed * z) + (transform.right * speed * x) +
+        rb.velocity = (transform.forward * currentSpeed * z) + (transform.right * currentSpeed * x) +
             new Vector3(0, rb.velocity.y, 0); //Gravedad base de Unity.
         //+ (transform.up * gravityScale); //Gravedad constante no realista
         //rb.AddForce(transform.up * gravityScale);
@@ -101,4 +120,11 @@ public class PlayerMovement_RB : MonoBehaviour
         Gizmos.DrawWireSphere(new Vector3(transform.position.x,
             transform.position.y - transform.localScale.y / 2, transform.position.z), sphereRadius);
     }
+
+    public float GetCurrentSpeed()
+    {
+        return currentSpeed;
+    }
+
+    
 }

@@ -21,6 +21,6 @@ public class PlayerAnimations : MonoBehaviour
     }
     private void LateUpdate()
     {
-        animator.SetFloat("Speed", playerMovement.GetMovementVector().magnitude / playerMovement.runningSpeed);
+        animator.SetFloat("Speed", playerMovement.GetCurrentSpeed() / playerMovement.runningSpeed);
     }
 }
