@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: af3481cedc9db80449fd8aba55ea8dc2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 733.6
+      value: 762
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af3481cedc9db80449fd8aba55ea8dc2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af3481cedc9db80449fd8aba55ea8dc2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 545.2
+      value: 184
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af3481cedc9db80449fd8aba55ea8dc2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -329,7 +329,7 @@ Transform:
   m_GameObject: {fileID: 614189726}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 733.6, y: 175.89, z: 530.2}
+  m_LocalPosition: {x: 762, y: 175.89, z: 169}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1018,7 +1018,7 @@ MonoBehaviour:
   aceleration: 5
   rotationSpeed: 200
   jumpForce: 300
-  sphereRadius: 1.25
+  sphereRadius: 1
   groundName: Ground
 --- !u!54 &1555245430
 Rigidbody:
@@ -1758,7 +1758,7 @@ Transform:
   m_GameObject: {fileID: 2034476504}
   serializedVersion: 2
   m_LocalRotation: {x: 0.111876026, y: -0.000000008549182, z: 9.624908e-10, w: 0.9937222}
-  m_LocalPosition: {x: 733.6, y: 175.89, z: 530.2}
+  m_LocalPosition: {x: 762, y: 175.89, z: 169}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

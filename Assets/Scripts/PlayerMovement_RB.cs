@@ -100,7 +100,7 @@ public class PlayerMovement_RB : MonoBehaviour
     private bool IsGrounded()
     {
         Collider[] colliders = Physics.OverlapSphere(new Vector3(transform.position.x,
-            transform.position.y - transform.localScale.y / 2, transform.position.z), sphereRadius);
+            transform.position.y  - transform.localScale.y / 20, transform.position.z), sphereRadius);
 
         for (int i = 0; i < colliders.Length; i++) //recorremos elemento a elemento.
         {
@@ -118,7 +118,7 @@ public class PlayerMovement_RB : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(new Vector3(transform.position.x,
-            transform.position.y - transform.localScale.y / 2, transform.position.z), sphereRadius);
+            transform.position.y - transform.localScale.y / 20, transform.position.z), sphereRadius);
     }
 
     public float GetCurrentSpeed()
