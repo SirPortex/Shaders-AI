@@ -63,8 +63,8 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Refraction_Strength: 0.1
-    - _Smoothness: 0.822
-    - _Strength: 0.023
+    - _Smoothness: 1
+    - _Strength: 0.025
     - _Water_Speed: 0.5
     m_Colors:
     - _DeepWaterColor: {r: 0.17933425, g: 0.24434206, b: 0.5849056, a: 0.7294118}

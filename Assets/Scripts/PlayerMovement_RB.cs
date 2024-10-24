@@ -124,6 +124,7 @@ public class PlayerMovement_RB : MonoBehaviour
     public float GetCurrentSpeed()
     {
         return currentSpeed;
+        
     }
 
     
