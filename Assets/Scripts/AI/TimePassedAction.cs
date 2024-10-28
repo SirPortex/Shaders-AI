@@ -1,28 +1,28 @@
-//using System;
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
+//using system;
+//using system.collections;
+//using system.collections.generic;
+//using unityengine;
 
 
-//[CreateAssetMenu(fileName = "TimePassedAction (A)", menuName = "ScriptableObjects/Actions/TimePassedAction")]
-//public class TimePassedAction : Action
+//[createassetmenu(filename = "timepassedaction (a)", menuname = "scriptableobjects/actions/timepassedaction")]
+//public class timepassedaction : action
 //{
-//    public float maxTime;
+//    public float maxtime;
 
-//    private float currentTime = 0;
-//    public override bool Check(GameObject owner)
+//    private float currenttime = 0;
+//    public override bool check(gameobject owner)
 //    {
-//        currentTime += Time.deltaTime;
+//        currenttime += time.deltatime;
 
-//        if (currentTime >= maxTime)
+//        if (currenttime >= maxtime)
 //        {
-//            currentTime = 0;
+//            currenttime = 0;
 //            return true;
 //        }
 //        return false;
 //    }
 
-//    public override void DrawGizmo(GameObject owner)
+//    public override void drawgizmo(gameobject owner)
 //    {
 
 //    }
