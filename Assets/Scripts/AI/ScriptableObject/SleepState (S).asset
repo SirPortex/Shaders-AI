@@ -9,16 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 610edb33b0b72c446a4b40fa39c43b2d, type: 3}
-  m_Name: PatrolState (S)
+  m_Script: {fileID: 11500000, guid: c78cd9ea1dc18134bb9dcc79575e0631, type: 3}
+  m_Name: SleepState (S)
   m_EditorClassIdentifier: 
   stateParameters:
   - actionParameters:
-    - action: {fileID: 11400000, guid: 363681b1c2854da4592d0b7808c2c8df, type: 2}
+    - action: {fileID: 11400000, guid: f73b1892dfd3b2c43b883f1b62127269, type: 2}
       actionValue: 1
-    nextState: {fileID: 11400000, guid: 08e946ba85f2ce24c9899d2b8fe03202, type: 2}
+    nextState: {fileID: 11400000, guid: 186e473c70f76ef439defc19e04a1556, type: 2}
     and: 0
-  arrayPoints:
-  - {x: 389, y: 147, z: 345}
-  - {x: 389, y: 147, z: 265}
-  maxTime: 3

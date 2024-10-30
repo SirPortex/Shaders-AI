@@ -11,7 +11,7 @@ public class TimePassedAction : Action
 {
     public float maxtime;
     
-    private float currenttime = 0;
+    public float currenttime = 0;
     public override bool Check(GameObject owner)
     {
         currenttime += Time.deltaTime;

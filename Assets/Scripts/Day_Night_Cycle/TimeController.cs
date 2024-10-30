@@ -44,13 +44,18 @@ public class TimeController : MonoBehaviour
 
     public DateTime currentTime;
 
-    private TimeSpan sunriseTime;
+    public TimeSpan sunriseTime;
 
-    private TimeSpan sunsetTime;
+    public TimeSpan sunsetTime;
+
+    public float timerCurrent;
+    public float timerMax;
 
     // Start is called before the first frame update
     void Start()
     {
+        //timerCurrent = 0;
+
         currentTime = DateTime.Now.Date + TimeSpan.FromHours(startHour);
 
         sunriseTime = TimeSpan.FromHours(sunriseHour);
@@ -60,9 +65,19 @@ public class TimeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timerCurrent += Time.deltaTime;
+
+        if(timerCurrent >= timerMax)
+        {
+            timerCurrent = 0;
+
+        }
+
         UpdateTimeOfDay();
         RotateSun();
         UpdateLightSettings();
+
+
     }
 
     private void UpdateTimeOfDay()
