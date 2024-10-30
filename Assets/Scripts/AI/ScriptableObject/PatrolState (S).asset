@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: PatrolState (S)
   m_EditorClassIdentifier: 
   stateParameters: []
-  guardPoint01: {x: 389.3, y: 147.03, z: 345.9}
-  guardPoint02: {x: 389.3, y: 147.03, z: 265.6}
+  arrayPoints:
+  - {x: 389, y: 147, z: 345}
+  - {x: 389, y: 147, z: 265}
+  maxTime: 3
