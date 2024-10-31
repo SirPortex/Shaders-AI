@@ -9,7 +9,7 @@ public class DayNightAction : Action
 {
     public override bool Check(GameObject owner)
     {
-        float timerCurrent  = owner.GetComponent<TimeController>().timerCurrent;
+        float timerCurrent  = owner.GetComponent<TimeReference>().GetTimeController().timerCurrent;
 
         if(timerCurrent >= 32.6f && timerCurrent <= 79.4f)
         {

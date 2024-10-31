@@ -16,7 +16,14 @@ MonoBehaviour:
   - actionParameters:
     - action: {fileID: 11400000, guid: 363681b1c2854da4592d0b7808c2c8df, type: 2}
       actionValue: 1
+    - action: {fileID: 11400000, guid: f73b1892dfd3b2c43b883f1b62127269, type: 2}
+      actionValue: 1
     nextState: {fileID: 11400000, guid: 08e946ba85f2ce24c9899d2b8fe03202, type: 2}
+    and: 1
+  - actionParameters:
+    - action: {fileID: 11400000, guid: f73b1892dfd3b2c43b883f1b62127269, type: 2}
+      actionValue: 0
+    nextState: {fileID: 11400000, guid: 0f659b2f37fde4141a1b0e4f5d369216, type: 2}
     and: 0
   arrayPoints:
   - {x: 389, y: 147, z: 345}
