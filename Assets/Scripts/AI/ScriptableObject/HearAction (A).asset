@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf17c5e7b809228478e95586075b0a1d, type: 3}
   m_Name: HearAction (A)
   m_EditorClassIdentifier: 
-  value: 0
+  value: 1
   radius: 20

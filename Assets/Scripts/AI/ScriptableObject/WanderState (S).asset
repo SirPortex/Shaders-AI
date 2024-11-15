@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 577d1942f300a2a4e8c91f076f1cc0d5, type: 3}
   m_Name: WanderState (S)
   m_EditorClassIdentifier: 
-  stateParameters: []
+  stateParameters:
+  - actionParameters:
+    - action: {fileID: 11400000, guid: 73a8c8f0a1466584396d145f05178a60, type: 2}
+      actionValue: 1
+    nextState: {fileID: 11400000, guid: 5d32ba82b5001274e9ce29cda487edc6, type: 2}
+    and: 0
   range: 50
   centrePoint: {x: 374.7, y: 137.94, z: 182.9}
