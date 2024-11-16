@@ -44,20 +44,42 @@ public class PlayerMovement_RB : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             jumpPressed = true;
+        
+
         }
         //jump
 
+        if (Input.GetKeyDown(KeyCode.F) && IsGrounded())
+        {
+            animator.SetBool("IsEmoting", true);
+            Emote();
+        }
         RotatePlayer();
+    }
+
+    public bool Emote()
+    {
+        if(Input.GetKeyDown(KeyCode.F) && IsGrounded())
+        {
+            Debug.Log("Estoy bailando");
+            animator.Play("Emote");
+            return true;
+        }
+
+        return false;
+        
     }
 
     public void InterpolationSpeed()
     {
         if (shiftPressed)
         {
+            animator.SetBool("IsEmoting", false);
             currentSpeed = Mathf.Lerp(currentSpeed, runningSpeed, aceleration * Time.deltaTime);
         }
         else if (x != 0 || z != 0)
         {
+            animator.SetBool("IsEmoting", false);
             currentSpeed = Mathf.Lerp(currentSpeed, walkingSpeed, aceleration * Time.deltaTime);
         }
         else

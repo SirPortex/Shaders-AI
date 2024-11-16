@@ -13,7 +13,6 @@ public class DamageEnemey : MonoBehaviour
             if (playerHealth)
             {
                 playerHealth.LoseLifes();
-                //Destroy(collision.gameObject);
             }
         }
     }
