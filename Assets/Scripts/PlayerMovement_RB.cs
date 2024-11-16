@@ -9,7 +9,7 @@ public class PlayerMovement_RB : MonoBehaviour
 
     public string groundName;
 
-    private Animator animator;
+    public Animator animator;
 
     private Vector3 movementVector;
 

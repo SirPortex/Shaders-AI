@@ -7,12 +7,13 @@ public class takelifes : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-
-        if (collision.gameObject.GetComponent<PlayerMovement_RB>())
+        if (collision.gameObject.GetComponent<PlayerMovement_RB>().animator.GetBool("IsEmoting") == true)
         {
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             if (playerHealth)
             {
+
+                Debug.Log("Te curo");
                 playerHealth.ReturnLifes();
                 
             }

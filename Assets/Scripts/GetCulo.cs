@@ -8,7 +8,9 @@ public class GetCulo : MonoBehaviour
     {
         if (other.GetComponent<PlayerMovement_RB>())
         {
-            Destroy(this);
+            Debug.Log("Recuperaste tu culo");
+            Destroy(gameObject);
+            GameManager.instance.LoadScene("Victory");
         }
     }
 }

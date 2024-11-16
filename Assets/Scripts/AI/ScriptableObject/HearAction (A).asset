@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HearAction (A)
   m_EditorClassIdentifier: 
   value: 1
-  radius: 20
+  radius: 30
