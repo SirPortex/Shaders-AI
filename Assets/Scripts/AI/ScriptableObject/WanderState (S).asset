@@ -22,3 +22,4 @@ MonoBehaviour:
     and: 1
   range: 50
   centrePoint: {x: 374.7, y: 137.94, z: 182.9}
+  chaseParameters: Speed

@@ -16,6 +16,8 @@ MonoBehaviour:
   - actionParameters:
     - action: {fileID: 11400000, guid: 73a8c8f0a1466584396d145f05178a60, type: 2}
       actionValue: 0
+    - action: {fileID: 11400000, guid: 961a64defcfa80c40af1a9267029c595, type: 2}
+      actionValue: 0
     nextState: {fileID: 11400000, guid: 83990268882ab4945b7603aecce04c1a, type: 2}
     and: 0
-  chaseParameters: 
+  chaseParameters: Speed

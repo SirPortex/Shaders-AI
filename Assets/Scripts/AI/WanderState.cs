@@ -14,11 +14,15 @@ public class WanderState : State
 
     public Vector3 centrePoint;
 
+    public string chaseParameters;
+
 
     public override State Run(GameObject owner)
     {
         State nextState = CheckActions(owner);
         NavMeshAgent navMeshAgent = owner.GetComponent<NavMeshAgent>();
+
+        Animator anim = owner.GetComponent<Animator>();
 
         if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
         {
@@ -30,7 +34,6 @@ public class WanderState : State
                 Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
                 navMeshAgent.SetDestination(point);
             }
-
         }
 
         bool RandomPoint(Vector3 center, float range, out Vector3 result)
@@ -47,6 +50,8 @@ public class WanderState : State
             result = Vector3.zero;
             return false;
         }
+
+        anim.SetFloat(chaseParameters, navMeshAgent.velocity.magnitude / navMeshAgent.speed);
 
         return nextState;
     }
