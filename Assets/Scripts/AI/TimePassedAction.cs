@@ -14,11 +14,11 @@ public class TimePassedAction : Action
     public float currenttime = 0;
     public override bool Check(GameObject owner)
     {
-        currenttime += Time.deltaTime;
+        currenttime += Time.deltaTime; //Contador
 
-        if (currenttime >= maxtime)
+        if (currenttime >= maxtime) // Si el currenttime supera el max time
         {
-            currenttime = 0;
+            currenttime = 0; // se reincia el contador a 0
             return true;
         }
         return false;

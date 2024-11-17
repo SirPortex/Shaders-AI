@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class HearAction : Action
 {
-    public float radius = 20f;
+    public float radius = 20f; // radio de la esfera
     public override bool Check(GameObject owner)
     {
         RaycastHit[] hits = Physics.SphereCastAll(owner.transform.position, radius, Vector3.up); // Casteamos una esfera alrededor del enemigo

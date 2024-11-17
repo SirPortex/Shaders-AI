@@ -23,18 +23,18 @@ public class PatrolState : State
         State nextState = CheckActions(owner);
         NavMeshAgent navMeshAgent = owner.GetComponent<NavMeshAgent>(); // al herederar de ScriptableObject hay que poner owner para poder heredar el componente de NavMeshAgent
 
-        navMeshAgent.SetDestination(arrayPoints[currentIndex]);
+        navMeshAgent.SetDestination(arrayPoints[currentIndex]); // Mandamos al agente al primer waypoint del index
         
-        if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+        if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance) // Si la distancia que queda por recorrer es menor a la distancia de detencion...
         {
-            currenttime += Time.deltaTime;
+            currenttime += Time.deltaTime; // empezamos un contador
 
-            if (currenttime >= maxTime)
+            if (currenttime >= maxTime) // si el contador llega al maximo valor
             {
-                currenttime = 0;
-                currentIndex++;
+                currenttime = 0; // se reincia el contador
+                currentIndex++; // se aumenta el index, el agente va a otro waypoint
 
-                if (currentIndex >= arrayPoints.Length)
+                if (currentIndex >= arrayPoints.Length) // si estamos en el ultimo waypoint se vuelve a reinciar el index
                 {
                     currentIndex = 0;
                 }

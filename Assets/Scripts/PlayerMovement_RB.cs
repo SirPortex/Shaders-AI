@@ -57,9 +57,9 @@ public class PlayerMovement_RB : MonoBehaviour
         RotatePlayer();
     }
 
-    public bool Emote()
+    public bool Emote() //Baile
     {
-        if(Input.GetKeyDown(KeyCode.F) && IsGrounded())
+        if(Input.GetKeyDown(KeyCode.F) && IsGrounded()) //Si presionamos la tecla F y estamos tocando el suelo se ejectuta la animacion de baiar
         {
             Debug.Log("Estoy bailando");
             animator.Play("Emote");
@@ -75,16 +75,16 @@ public class PlayerMovement_RB : MonoBehaviour
         if (shiftPressed)
         {
             animator.SetBool("IsEmoting", false);
-            currentSpeed = Mathf.Lerp(currentSpeed, runningSpeed, aceleration * Time.deltaTime);
+            currentSpeed = Mathf.Lerp(currentSpeed, runningSpeed, aceleration * Time.deltaTime); //velocidad de correr
         }
         else if (x != 0 || z != 0)
         {
             animator.SetBool("IsEmoting", false);
-            currentSpeed = Mathf.Lerp(currentSpeed, walkingSpeed, aceleration * Time.deltaTime);
+            currentSpeed = Mathf.Lerp(currentSpeed, walkingSpeed, aceleration * Time.deltaTime); // velocidad de caminar
         }
         else
         {
-            currentSpeed = Mathf.Lerp(currentSpeed, 0, aceleration * Time.deltaTime);
+            currentSpeed = Mathf.Lerp(currentSpeed, 0, aceleration * Time.deltaTime); // velocidad de idle
         }
     }
 

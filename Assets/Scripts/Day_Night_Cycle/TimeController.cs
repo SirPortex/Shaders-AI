@@ -56,16 +56,16 @@ public class TimeController : MonoBehaviour
     {
         //timerCurrent = 0;
 
-        currentTime = DateTime.Now.Date + TimeSpan.FromHours(startHour);
+        currentTime = DateTime.Now.Date + TimeSpan.FromHours(startHour); // hora en la que empieza el contador
 
-        sunriseTime = TimeSpan.FromHours(sunriseHour);
-        sunsetTime = TimeSpan.FromHours(sunsetHour);
+        sunriseTime = TimeSpan.FromHours(sunriseHour); // hora del amanecer
+        sunsetTime = TimeSpan.FromHours(sunsetHour); // hora del atardecer
     }
 
     // Update is called once per frame
     void Update()
     {
-        timerCurrent += Time.deltaTime;
+        timerCurrent += Time.deltaTime; // Contador
 
         if(timerCurrent >= timerMax)
         {
@@ -86,7 +86,7 @@ public class TimeController : MonoBehaviour
 
         if (timeText != null)
         {
-            timeText.text = currentTime.ToString("HH:mm");
+            timeText.text = currentTime.ToString("HH:mm"); //Formato en la que represntamos el tiempo, lo pasamos a String para poder verlo
         }
     }
 

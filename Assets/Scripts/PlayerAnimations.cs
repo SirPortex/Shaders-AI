@@ -21,7 +21,7 @@ public class PlayerAnimations : MonoBehaviour
     }
     private void LateUpdate()
     {
-        animator.SetFloat("Speed", playerMovement.GetCurrentSpeed() / playerMovement.runningSpeed);
+        animator.SetFloat("Speed", playerMovement.GetCurrentSpeed() / playerMovement.runningSpeed); //Variable de Speed del BlendTree que vaya relacionado con nuestra velocidad
 
     }
 }

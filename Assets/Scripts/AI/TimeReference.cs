@@ -9,7 +9,7 @@ public class TimeReference : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        controller = FindAnyObjectByType<TimeController>();
+        controller = FindAnyObjectByType<TimeController>(); // Referencia del script del controlador del paso del tiempo dia/noche
     }
 
     public TimeController GetTimeController() //Getter

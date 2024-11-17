@@ -8,14 +8,14 @@ public class SeeAction : Action // dar a la bombilla para que lo complete bien l
     public float vision;
     public override bool Check(GameObject owner)
     {
-        GameObject target = owner.GetComponent<TargetReference>().target;
-        ConeCollider coneCollider = owner.GetComponentInChildren<ConeCollider>();
-        List<GameObject> visionList = coneCollider.GetVisionList();
-        foreach (GameObject gameObjectInVision in visionList)
+        GameObject target = owner.GetComponent<TargetReference>().target; //Cogemos al Target para saber a que perseguir
+        ConeCollider coneCollider = owner.GetComponentInChildren<ConeCollider>(); // Cogemos el cono que va a ser la vision
+        List<GameObject> visionList = coneCollider.GetVisionList(); // Cogemos la lista de las colisiones del cono 
+        foreach (GameObject gameObjectInVision in visionList) // Por cada objeto que colisiona  con el cono
         {
-            if(gameObjectInVision == target)
+            if(gameObjectInVision == target) //comprobamos si el el target (among us)
             {
-                return true;
+                return true; 
             }
         }
         return false;

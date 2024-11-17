@@ -18,16 +18,15 @@ public class PlayerHealth : MonoBehaviour
 
     public void ChangeScene()
     {
-        GameManager.instance.LoadScene("Defeat");
+        GameManager.instance.LoadScene("Defeat"); //Cambiamos de escena a derrota
     }
 
     public void LoseLifes()
     {
-        lifes -= 1;
-        if (lifes == 0)
+        lifes -= 1; //Quitamos una vida
+        if (lifes == 0) //Si tenemos 0 vidas cambia de escena
         {
             ChangeScene();
-            //SceneManager.LoadScene(6);
         }
 
         lifeInterface.DesactiveLifes(lifes);
