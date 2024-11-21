@@ -20,6 +20,7 @@ public class SeeAction : Action // dar a la bombilla para que lo complete bien l
         }
         return false;
     }
+    
 
     public override void DrawGizmos(GameObject owner)
     {

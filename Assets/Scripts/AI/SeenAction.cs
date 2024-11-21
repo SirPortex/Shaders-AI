@@ -9,17 +9,18 @@ public class SeenAction : Action
     public override bool Check(GameObject owner)
     {
         GameObject target = owner.GetComponent<TargetReference>().target;
-        WhatAmILooking whatAmILooking = target.GetComponentInChildren<WhatAmILooking>();
-        List<GameObject> targetViewList = whatAmILooking.viewList;
+        ConeCollider collider = target.GetComponentInChildren<ConeCollider>();
+        List<GameObject> targetViewList = collider.list;
 
         foreach (GameObject objectInVision in targetViewList)
         {
             if(owner == objectInVision)
             {
+                Debug.Log("UN ENEMIGO DEL FORTNITE");
                 return true;
             }
         }
-        return true;
+        return false;
     }
 
     public override void DrawGizmos(GameObject owner)

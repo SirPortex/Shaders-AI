@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[CreateAssetMenu(fileName = "Deambular (S)", menuName = "ScriptableObject/States/Deambular")]
+[CreateAssetMenu(fileName = "FleeState (S)", menuName = "ScriptableObject/States/FleeState")]
 
 public class FleeState : State
 {

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610edb33b0b72c446a4b40fa39c43b2d, type: 3}
+  m_Name: PatrolState (S)
+  m_EditorClassIdentifier: 
+  stateParameters:
+  - actionParameters:
+    - action: {fileID: 11400000, guid: b377a394f105bb74287bcb405b694e11, type: 2}
+      actionValue: 1
+    - action: {fileID: 11400000, guid: ef4e58136c0b8054099ae3b14030ce27, type: 2}
+      actionValue: 1
+    nextState: {fileID: 11400000, guid: 798cf9da4aa6e2a4099a5dde065b40f8, type: 2}
+    and: 0
+  arrayPoints:
+  - {x: 1, y: 0, z: 0}
+  - {x: 2, y: 0, z: 0}
+  maxTime: 0
