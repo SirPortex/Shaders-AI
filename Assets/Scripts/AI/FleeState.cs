@@ -18,4 +18,5 @@ public class FleeState : State
         navMeshAgent.SetDestination(owner.transform.position + (flee * 5));
         return nextState;
     }
+   
 }

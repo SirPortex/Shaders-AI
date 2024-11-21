@@ -6,6 +6,8 @@ public class PlayerMovement_RB : MonoBehaviour
 {
     public float walkingSpeed, runningSpeed, aceleration, rotationSpeed, jumpForce, sphereRadius;//,gravityScale;
 
+    public float life = 100;
+
 
     public string groundName;
 
